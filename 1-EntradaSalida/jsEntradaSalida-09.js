@@ -6,5 +6,6 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 
-	alert("ok");
+  	var n1 = parseInt(txtIdSueldo.value);
+	txtIdResultado.value = n1 + (n1/100 * 10);
 }
