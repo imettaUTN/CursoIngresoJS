@@ -6,9 +6,14 @@ ej.: "la Resta es 750"*/
 
 function sumar()
 {	
-var sNumero1 = parseInt(txtIdNumeroUno.value);
-var sNumero2 = parseInt(txtIdNumeroDos.value);
-	alert(sNumero1+sNumero2);	
+var sNumero1
+var sNumero2
+sNumero1 = txtIdNumeroUno.value;
+sNumero1= parseInt(sNumero1);
+sNumero2 = txtIdNumeroDos.value;
+sNumero2= parseInt(sNumero2);
+var sSuma = sNumero1 + sNumero2;
+alert(sSuma);	
 }
 
 /*Test sumar
@@ -18,9 +23,14 @@ Numero 1: 333 Numero 2: 77 resultado : 410
 */
 function restar()
 {
-	var sNumero1 = parseInt(txtIdNumeroUno.value);
-var sNumero2 = parseInt(txtIdNumeroDos.value);
-	alert(sNumero1-sNumero2);	
+var sNumero1
+var sNumero2
+sNumero1 = txtIdNumeroUno.value;
+sNumero1= parseInt(sNumero1);
+sNumero2 = txtIdNumeroDos.value;
+sNumero2= parseInt(sNumero2);
+var sResta = sNumero1 - sNumero2;
+alert(sResta);	
 }
 
 
@@ -32,9 +42,14 @@ Numero 1: 333 Numero 2: 33 resultado : 300
 
 function multiplicar()
 { 
-	var sNumero1 = parseInt(txtIdNumeroUno.value);
-var sNumero2 = parseInt(txtIdNumeroDos.value);
-	alert(sNumero1*sNumero2);	
+var sNumero1
+var sNumero2
+sNumero1 = txtIdNumeroUno.value;
+sNumero1= parseInt(sNumero1);
+sNumero2 = txtIdNumeroDos.value;
+sNumero2= parseInt(sNumero2);
+var sResultado = sNumero1 * sNumero2;
+alert(sResultado);		
 }
 
 
@@ -45,9 +60,14 @@ Numero 1: 333 Numero 2: 77 resultado : 25641
 */
 function dividir()
 {
-	var sNumero1 = parseInt(txtIdNumeroUno.value);
-var sNumero2 = parseInt(txtIdNumeroDos.value);
-	alert(sNumero1/sNumero2);	
+var sNumero1
+var sNumero2
+sNumero1 = txtIdNumeroUno.value;
+sNumero1= parseInt(sNumero1);
+sNumero2 = txtIdNumeroDos.value;
+sNumero2= parseInt(sNumero2);
+var sResultado = sNumero1 /sNumero2;
+alert(sResultado);			
 }
 
 
