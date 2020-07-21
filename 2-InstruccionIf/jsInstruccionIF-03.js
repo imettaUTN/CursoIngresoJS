@@ -1,12 +1,15 @@
 function mostrar()
 {
+	var edad;
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
 	var mensaje = "";
-	if(txtIdEdad.value >= 18){
-	 mensaje = "Soy mayor de edad";
+	if(edad < 18){
+	 mensaje = "Soy menor de edad";
 	}
 	else{
-		 mensaje = "Soy menor de edad";
+		 mensaje = "Soy mayor de edad";
 	}
 
-alert(mensaje);
+	alert(mensaje);
 }//FIN DE LA FUNCIÓN

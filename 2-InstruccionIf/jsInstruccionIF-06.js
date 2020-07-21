@@ -1,13 +1,30 @@
+/* Ejercicio 6
+Ivan Metta
+Al ingresar una edad debemos informar si la persona es 
+					mayor de edad (mas de 18 años) o 
+					adolescente (entre 13 y 17 años) o 
+					niño (menor a 13 años).*/
 function mostrar()
-{
-	if(txtIdEdad.value >= 13 && txtIdEdad.value <=17 ) {
-		alert("soy adolescente");
+{	var edad;
+	var mensaje = '';
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
+
+    if(edad <12  ) 
+	{
+	 alert("soy un niño");
 	}
-	if(txtIdEdad.value >= 18) {
-		alert("soy mayor de edad");
-	}
-	if(txtIdEdad.value < 13) {
-		alert("soy menor de edad");
-	}
+	else
+	{
+	 if(edad >18  ) 
+	 {
+	 alert("soy mayor");
+	 }
+	 else
+	 {
+	 alert("soy adolescente");
+	 }
+
+    }
 
 }//FIN DE LA FUNCIÓN

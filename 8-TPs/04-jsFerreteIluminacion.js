@@ -10,5 +10,81 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var cantidad;
+ 	var marcaElegida;
+ 	var precioBase;
+ 	var precioFinal;
+ 	var importeDescuento;
+ 	importeDescuento=0;
+ 	precioFinal = 0;
+ 	precioBase = 35;
+ 	cantidad = txtIdCantidad.value;
+ 	cantidad = parseInt(cantidad);
+    marcaElegida = Marca.value;
+    precioFinal = precioBase * precioBase;
+
+	if(cantidad >5)
+	{    
+     precioFinal = precioFinal - (precioFinal * 50 /100);
+	}
+    
+    else
+    {
+		if(cantidad == 5)
+		{
+		     if(marcaElegida == "ArgentinaLuz"){
+		        precioFinal = precioFinal - (precioFinal * 40 /100);
+		     }
+		     else{
+		        precioFinal = precioFinal - (precioFinal * 30 /100);
+		     }
+		}
+		else
+		{
+			
+			if(cantidad == 4)
+			{
+			     if(marcaElegida == "ArgentinaLuz" || marcaElegida == "FelipeLamparas"){
+			        precioFinal = precioFinal - (precioFinal * 25 /100);
+			     }
+			     else{
+			        precioFinal = precioFinal - (precioFinal * 20 /100);
+			     }
+			}
+			else
+			{
+
+				if(cantidad == 3)
+				{
+					 if (marcaElegida == "ArgentinaLuz")
+				     {
+				        precioFinal = precioFinal - (precioFinal * 15 /100);
+
+				     }
+				     else
+				     {
+				     	if(marcaElegida == "FelipeLamparas")
+				     	{
+				     	  precioFinal = precioFinal - (precioFinal * 10 /100);
+				        }
+				        else
+				        {
+				           precioFinal = precioFinal - (precioFinal * 5 /100);
+				        }  
+
+					 }
+				}
+			}		
+
+	    }
+    }
+    
+	if(precioFinal > 120)
+	{
+     importeDescuento = precioFinal * 10 /100;
+     precioFinal = precioFinal + importeDescuento;
+     alert("Usted pago " + importeDescuento + " de IIBB.")
+	}
+
+	txtIdprecioDescuento.value = precioFinal;
 }
