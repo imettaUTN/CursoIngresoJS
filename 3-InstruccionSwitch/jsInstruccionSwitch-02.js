@@ -1,49 +1,40 @@
+/*
+ivn metta  
+
+eje 2:
+
+al seleccionar un mes  informar.
+						</br>si estamos en Invierno: "Abrigate que hace frio."
+						</br>si aun no llego el Invierno: "Falta para el invierno."
+						</br>si ya paso el Invierno: "Ya pasamos el frio, ahora calor!!!."
+					</br>ACLARACóN: tomamos a Julio y Agosto como los meses de Invierno.
+
+
+*/
 function mostrar()
 {
 	//tomo el mes
 	var mesDelAño =txtIdMes.value;
 	var mensaje ;
-	switch(mesDelAño) {
+	switch(mesDelAño) 
+	{
 		case "Enero":
-		mensaje = "Falta para el invierno.";
-		break;
 		case "Febrero":
-		mensaje = "Falta para el invierno.";
-		break;
 		case "Marzo":
-		mensaje = "Falta para el invierno.";
-		break;
 		case "Abril":
-		mensaje = "Falta para el invierno.";
-		break;
 		case "Mayo":
-		mensaje = "Falta para el invierno.";
-		break;
 		case "Junio":
-		mensaje = "Abrigate que hace frio.";
-		break;
-		case "Julio":
-		mensaje = "Abrigate que hace frio.";
-		break;
+			mensaje = "Falta para el invierno";
+			break;
+		case "Julio":	
 		case "Agosto":
-		mensaje = "Ya paso el invierno.";
-		break;
-		case "Septimbre":
-		mensaje = "Ya paso el invierno.";
-		break;
-		case "Octubre":
-		mensaje = "Ya paso el invierno.";
-		break;
-		case "Noviembre".:
-		mensaje = "Ya paso el invierno.";
-		break;
-		case "Diciembre":
-		mensaje = "Ya paso el invierno.";
-		break;
+			mensaje = "Abrigate que hace frio.";
+			break;	
+		default
+			mensaje = "Ya paso el invierno.";
+			break;		
 	}
+
 	alert(mensaje);
-
-
-
 
 }//FIN DE LA FUNCIÓN

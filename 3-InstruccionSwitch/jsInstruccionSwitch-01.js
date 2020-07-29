@@ -1,3 +1,13 @@
+/*
+
+Ivan Metta
+
+eje 1
+</br>si es Enero: "que comiences bien el año!!!."
+</br>si es Marzo: "a clases!!!."
+</br>si es Julio: "se vienen las vacaciones!!!."
+</br>si es Diciembre: "Felices fiesta!!!."
+*/
 function mostrar()
 {
 	//tomo el mes
