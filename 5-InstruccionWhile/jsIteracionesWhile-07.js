@@ -7,11 +7,18 @@ function mostrar()
 	var contador;
 	var acumulador;
 	var respuesta;
+	var numeroIngresado;
 	contador=0;
 	acumulador=0;
-	respuesta='si';
-
-
+	continua = true;
+	while(continua)
+	{
+		continua = confirm("Continua ingresando valores?");
+		numeroIngresado = prompt("Numero ingresado");
+		numeroIngresado =parseInt(numeroIngresado);
+		acumulador += numeroIngresado;
+		contador++;
+	}
 	txtIdSuma.value=acumulador;
 	txtIdPromedio.value=acumulador/contador;
 
