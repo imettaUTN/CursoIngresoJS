@@ -1,4 +1,6 @@
 /*
+ivan metta
+eje 9
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
@@ -6,7 +8,7 @@ function mostrar()
 	var numeroIngresado;
 	var numeroMaximo =0;
 	var numeroMinimo =0;
-	var continua;
+	var continua= true;
 	while(continua)
 	{		
 		continua = window.confirm("Continua ingresando valores?");

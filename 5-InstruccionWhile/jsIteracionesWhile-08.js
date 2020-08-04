@@ -1,4 +1,5 @@
 /*
+IVAN METTA
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
@@ -24,7 +25,10 @@ function mostrar()
 		}
 		else
 		{
-			multiplicacionNegativos *= numeroIngresado;
+			if( numeroIngresado < 0)
+			{
+				multiplicacionNegativos *= numeroIngresado;
+			}
 		}
 	}
 	txtIdSuma.value=sumaPositivos;

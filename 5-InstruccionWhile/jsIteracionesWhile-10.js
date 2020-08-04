@@ -1,4 +1,5 @@
 /*
+IVAN METTA
 Al presionar el botón pedir  números  
 hasta que el usuario quiera, mostrar:
 1-Suma de los negativos.
@@ -13,7 +14,7 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var continua;
+	var continua = true;
 	var cantidadPositivo = 0;
 	var cantidadNegativo = 0;
 	var cantidadPares = 0;
@@ -22,9 +23,8 @@ function mostrar()
 	var sumaNegativos=0;
 	var sumaPositivos=0;
 
-	while(continuar)
+	while(continua)
 	{
-		continua = confirm("Continua ingresando valores?");
 		numeroIngresado = prompt("Numero ingresado");
 		numeroIngresado =parseInt(numeroIngresado);
 		if(numeroIngresado % 2 == 0)
@@ -49,6 +49,7 @@ function mostrar()
 				cantidadNegativo ++;
 			}	
 		}
+		continua = confirm("Continua ingresando valores?");
 
 	}//fin del while
 

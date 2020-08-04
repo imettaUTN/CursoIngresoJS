@@ -1,4 +1,6 @@
-/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar 
+/*
+IVAN METTA
+RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar 
 una carga de datos validada e ingresada por ventanas emergentes solamente 
 (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
 12.   Los datos requeridos son los siguientes:
@@ -19,93 +21,99 @@ function ComenzarIngreso ()
  	var sueldoBrutoIngresado;
  	var nroLegajoIngresado;
  	var NacionalidadIngresada;
- 	var edadInValida = true;
- 	var sexoInValido = true;
- 	var estadoCivilInValido = true;
- 	var sueldoBrutoInValido = true;
- 	var NacionalidadInValida = true;
- 	var legajoInValido = true;
+ 	var strEstadoCivil;
+ 	var strNacionalidad;
+ 	var strSexo;
+
  	//edad
-	do
+ 	edadIngresada = prompt("Ingrese Edad");
+	edadIngresada = parseInt(edadIngresada);
+	while(edadIngresada < 18 || edadIngresada >90 || isNaN(edadIngresada))
 	{
+		alert("La edad debe estar entre 18 y 90 años");
 		edadIngresada = prompt("Ingrese Edad");
 		edadIngresada = parseInt(edadIngresada);
-		edadInValida =(edadIngresada < 18 || edadIngresada >90);
-		if(edadInValida)
-		{ 
-			alert("La edad debe estar entre 18 y 90 años");
-		}
 	}
-	while(edadInValida);
 	txtIdEdad.value = edadIngresada;
 
 	//sexo
-	do
+	sexoIngresado = prompt("Ingrese Sexo. M para masculino, F para femenino");
+	while(sexoIngresado != "M" && sexoIngresado != "F")
 	{
+		alert("El sexo ingresado es invalido");
 		sexoIngresado = prompt("Ingrese Sexo. M para masculino, F para femenino");
-		sexoInValido =(sexoIngresado != "M" && sexoIngresado != "F");
-		if(sexoInValido)
-		{ 
-			alert("El sexo ingresado es invalido");
-		}
 	}
-	while(sexoInValido);
-	txtIdSexo.value = sexoIngresado;
+	if(sexoIngresado == "M"){
+		strSexo = "masculino";
+	}
+	else
+	{
+		strSexo = "femenino";
+	}
+	txtIdSexo.value = strSexo;
 
 	//estado civil
-	do
+	estadoCivilIngresado = prompt("Ingrese estado civil. 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos"); 
+	estadoCivilIngresado = parseInt(estadoCivilIngresado);
+	while(estadoCivilIngresado <0 || estadoCivilIngresado > 4 || isNaN(estadoCivilIngresado))
 	{
+		alert("El estado civil ingresado es invalido");
 		estadoCivilIngresado = prompt("Ingrese estado civil. 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos"); 
-		estadoCivilIngresado = parseInt(estadoCivilIngresado);
-		estadoCivilInValido =(estadoCivilIngresado <0 || estadoCivilIngresado > 4);		
-		if(estadoCivilInValido)
-		{ 
-			alert("El estado civil ingresado es invalido");
-		}
+		estadoCivilIngresado = parseInt(estadoCivilIngresado);		
 	}
-	while(estadoCivilInValido);
-	txtIdEstadoCivil.value = estadoCivilIngresado;
+   	switch(estadoCivilIngresado)
+   	{
+   		case 1 :
+   			strEstadoCivil = "soltero";
+   		case 2:
+   			strEstadoCivil = "casado";
+   		case 3:
+   			strEstadoCivil = "divorciado";
+   		case 4:
+   			strEstadoCivil = "viudo";
+   	}
+   	txtIdEstadoCivil.value = strEstadoCivil;
 
-	//sueldo bruto
-	do
-	{
+   	//sueldo bruto
+   	sueldoBrutoIngresado = prompt("Ingrese sueldo bruto"); 
+	sueldoBrutoIngresado = parseInt(sueldoBrutoIngresado);
+	while(sueldoBrutoIngresado <8000)
+	{	
+		alert("El sueldo bruto ingresado es invalido");
 		sueldoBrutoIngresado = prompt("Ingrese sueldo bruto"); 
-		sueldoBrutoIngresado = parseInt(sueldoBrutoIngresado);
-		sueldoBrutoInValido =(sueldoBrutoIngresado <8000);
-		if(sueldoBrutoInValido)
-		{ 
-			alert("El sueldo bruto ingresado es invalido");
-		}
+		sueldoBrutoIngresado = parseInt(sueldoBrutoIngresado);		
 	}
-	while(sueldoBrutoInValido);
 	txtIdSueldo.value = estadoCivilIngresado;
 
 	//legajo
-	do
+	nroLegajoIngresado = prompt("Ingrese nro legajo"); 
+	nroLegajoIngresado = parseInt(nroLegajoIngresado);	
+	while(nroLegajoIngresado <1000 || nroLegajoIngresado > 9999 || isNaN(nroLegajoIngresado))
 	{
+		alert("Nro de legajo ingresado es invalido");
 		nroLegajoIngresado = prompt("Ingrese nro legajo"); 
-		nroLegajoIngresado = parseInt(nroLegajoIngresado);
-		legajoInValido = (nroLegajoIngresado <1000 || nroLegajoIngresado > 9999);
-		if(legajoInValido)
-		{ 
-			alert("Nro de legajo ingresado es invalido");
-			legajoInValido = false;
-		}
-	}
-	while(legajoInValido);
+		nroLegajoIngresado = parseInt(nroLegajoIngresado);		
+	}	
 	txtIdLegajo.value = nroLegajoIngresado;
 
 	//nacionalidad A E N
-	do
+
+	NacionalidadIngresada = prompt("Ingrese Nacionalidad", "E"); 
+	while(NacionalidadIngresada != "N" && NacionalidadIngresada != "A" && NacionalidadIngresada != "E")
 	{
+		alert("Nacionalidad ingresada es invalida");
 		NacionalidadIngresada = prompt("Ingrese Nacionalidad", "E"); 
-		NacionalidadInValida = (NacionalidadIngresada != "N" && NacionalidadIngresada != "A" && NacionalidadIngresada != "E");
-		if(NacionalidadInValida)
-		{ 
-			alert("Nacionalidad ingresada es invalida");
-		}
 	}
-	while(NacionalidadInValida);
-	txtIdNacionalidad.value = NacionalidadIngresada;
+	switch(NacionalidadIngresada)
+	{
+		case "N":
+			strEstadoCivil = estadoCivilIngresado;
+		case "A"
+			strEstadoCivil = estadoCivilIngresado;
+		default :
+			strEstadoCivil = estadoCivilIngresado;
+
+	}
+	txtIdNacionalidad.value = strEstadoCivil;
 
 }
