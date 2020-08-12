@@ -13,7 +13,6 @@
 */
 function mostrar()
 {
-	var i;
 	var tipoProducto;
 	var precio;
 	var cantUnd;
@@ -30,7 +29,7 @@ function mostrar()
 	cantUnidadesPrecioMaxJabon = 0;
 	cantBarbijos = 0;
 
-	for(i=0; i<5 ; i++)
+	for(var i=0; i<5 ; i++)
 	{
 		tipoProducto = prompt("Ingrese tipo de producto barbijo - jabón - alcohol");
 		tipoProducto.toUpperCase();
